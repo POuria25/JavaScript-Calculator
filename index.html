@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="calculator">
+    <div class="display-container">
+      <input type="text" id="display" disabled />
+    </div>
+    <div class="buttons">
+      <!-- First Row -->
+      <button onclick="clearDisplay()" class="red">C</button>
+      <button onclick="appendOperator('(')">(
+      </button>
+      <button onclick="appendOperator(')')">)
+      </button>
+      <button onclick="appendMod()">mod</button>
+      <button onclick="appendNumber('Math.PI')">π
+      </button>
+
+      <!-- Second Row -->
+      <button onclick="appendNumber(7)">7</button>
+      <button onclick="appendNumber(8)">8</button>
+      <button onclick="appendNumber(9)">9</button>
+      <button onclick="appendOperator('/')">÷
+      </button>
+      <button onclick="appendSquareRoot()">√</button>
+
+      <!-- Third Row -->
+      <button onclick="appendNumber(4)">4</button>
+      <button onclick="appendNumber(5)">5</button>
+      <button onclick="appendNumber(6)">6</button>
+      <button onclick="appendOperator('*')">×</button>
+      <button onclick="appendPower2()">x²</button>
+
+      <!-- Fourth Row -->
+      <button onclick="appendNumber(1)">1</button>
+      <button onclick="appendNumber(2)">2</button>
+      <button onclick="appendNumber(3)">3</button>
+      <button onclick="appendOperator('-')">−</button>
+      <button onclick="appendOperator('+')">+</button>
+
+      <!-- Fifth Row -->
+      <button onclick="appendNumber(0)">0</button>
+      <button onclick="appendNumber('.')">.</button>
+      <button onclick="appendFib()">Fib</button>
+      <button onclick="appendOperator('!')">n!</button>
+      <button onclick="calculateResult()" class="green"> = </button>
+    </div>
+  </div>
+  <script src="calculator.js"></script>
+</body>
+
+</html>

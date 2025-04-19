@@ -1,0 +1,111 @@
+/* styles.css */
+
+@font-face {
+  font-family: 'DigitalNumbers';
+  src: url('DigitalNumbers-Regular.ttf') format('truetype'); /* Adjust the path and filename */
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('math_wallpaper.jpg'); 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('math_wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(1.5px); 
+  z-index: -1; 
+}
+
+.calculator {
+  width: 300px;
+  padding: 20px;
+  background-color: #b1b4b4;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack display and buttons vertically */
+  gap: 10px; /* Space between display and buttons */
+}
+
+
+#display {
+  width: 100%; /* Match the width of the button grid */
+  height: 70px;
+  font-size: 35px;
+  text-align: right;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #303030; /* Black background for a digital look */
+  color: #00ff00; /* Green text for a classic digital display */
+  font-family: 'DigitalNumbers', sans-serif;
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns for buttons */
+  gap: 10px; /* Spacing between buttons */
+}
+
+button {
+  height: 50px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+  background-color: #e0e0e0; /* Default button color */
+  color: #333;
+}
+
+button:hover {
+  background-color: #818589; /* Light gray on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+button.red {
+  background-color: #ff4d4d; /* Red button */
+}
+
+button.red:hover {
+  background-color: #ff6b6b; /* Slightly darker red on hover */
+}
+
+button.green {
+  background-color: #2ecc71; /* Green button */
+}
+
+button.green:hover {
+  background-color: #27ae60; /* Slightly darker green on hover */
+}
+
+button.operator {
+  background-color: #3498db; /* Blue for operators */
+  color: white;
+}
+
+button.operator:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
